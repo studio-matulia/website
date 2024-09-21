@@ -19,6 +19,9 @@ class MyTeaser extends HTMLElement {
       // Add styles
       const style = document.createElement('style');
       style.textContent = `
+        * {
+          box-sizing: border-box;
+        }
         .teaser {
           width: 100%;
           max-width: 320px;
@@ -27,13 +30,10 @@ class MyTeaser extends HTMLElement {
           display: flex;
           align-items: flex-end;
           justify-content: space-between;
-          padding: 8px;
+          padding: 12px;
           border: 1px solid var(--foreground-primary);
           text-decoration: none;
           color: var(--foreground-primary);
-        }
-        .teaser:hover {
-          background-color: var(--background-subtle);
         }
       `;
   
