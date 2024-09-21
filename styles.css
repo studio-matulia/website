@@ -102,7 +102,7 @@ section h2 {
 }
 
 .asci {
-    font-size: max(2px, 0.1vw);
+    font-size: 0.2vw;
 }
 
 .work_teaser {
@@ -111,6 +111,7 @@ section h2 {
     aspect-ratio: 4/3;
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
     padding: 8px;
     border: 1px solid var(--foreground-primary);
 }
