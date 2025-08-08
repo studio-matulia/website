@@ -9,6 +9,8 @@
     --background-primary: #e2e2e2;
     --background-subtle: #c9c9c9;
     --foreground-primary: #242424;
+
+    --space-responsive-sm: 20px;
 }
 
 * {
@@ -18,8 +20,14 @@
 body {
     margin: 0;
     font-family: var(--font-family-primary);
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    line-height: 1.4;
+    word-break: break-all;
     background-color: var(--background-primary);
     color: var(--foreground-primary);
+    padding: var(--space-responsive-sm);
+    display: flex;
+    flex-direction: column;
 }
 
 body.dark {
@@ -28,21 +36,21 @@ body.dark {
     --foreground-primary: #e2e2e2;
 }
 
-main {
-    min-height: 100vh;
-    padding: 80px 32px 32px;
-}
-
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 32px;
+    padding: var(--space-responsive-sm);
 }
 
 p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
+}
+
+h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 1.0;
 }
 
 button {
@@ -61,15 +69,18 @@ a {
 
 section {
     width: 100%;
-    padding: 20px 0;
-    margin-top: 48px;
-    border-top: 1px solid var(--foreground-primary);
+    min-height: calc(100vh - var(--space-responsive-sm) * 2);
 }
 
-section h2 {
-    margin-bottom: 16px;
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
 }
 
-.asci {
-    font-size: 0.2vw;
+@media screen and (min-width: 1024px) {
+    :root {
+        --space-responsive-sm: 40px;
+    }
 }
