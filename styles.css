@@ -86,6 +86,11 @@ section {
     gap: 32px;
 }
 
+::selection {
+  background-color: var(--foreground-primary);
+  color: var(--background-primary);
+}
+
 @media screen and (min-width: 1024px) {
     :root {
         --space-responsive-sm: 40px;

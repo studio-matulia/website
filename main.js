@@ -46,5 +46,6 @@ if (loadingElement) {
         loadingElement.textContent = GLYPHS[currentGlyphIndex];
         currentGlyphIndex = (currentGlyphIndex + 1) % GLYPHS.length;
     }
+
     setInterval(animateGlyph, ANIMATION_SPEED_MS);
 }
